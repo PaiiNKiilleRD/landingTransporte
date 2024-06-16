@@ -1,0 +1,12 @@
+<button
+  class:list={[
+    "flex flex-row gap-x-2 uppercase cursor-pointer font-medium text-white px-5 py-2.5 rounded-lg transition-all duration-200 hover:scale-110 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 ease-in-out hover:shadow-xl text-center",
+    Astro.props.class,
+  ]}
+>
+  <slot name="before" />
+  <slot />
+  <slot name="after" />
+</button>
+
+<!-- flex-row shadow-lg justify-center uppercase text-white cursor-pointer  focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg px-5 py-2.5 text-center flex items-center  hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-100 -->

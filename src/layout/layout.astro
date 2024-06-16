@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+
+import Navbar from "@/sections/navbar.astro";
+---
+
+<html lang="en">
+  <head>
+    <!-- ICONS -->
+
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <!--  BARRA DE NAVEGACION  -->
+    <header>
+      <Navbar />
+    </header>
+    <!-- BODY -->
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  body {
+    @apply bg-primary;
+  }
+
+  .h1 {
+    @apply text-[48px] xl:text-[80px] leading-[1.1];
+  }
+
+  .h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1];
+  }
+
+  .h3 {
+    @apply text-[20px] xl:text-[24px] leading-[1.1];
+  }
+</style>

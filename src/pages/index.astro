@@ -1,0 +1,47 @@
+---
+import Layout from "../layout/layout.astro";
+import Button from "@/components/button.astro";
+import Sidemenu from "@/sections/sidemenu.astro";
+
+import { Icon } from "astro-iconify";
+
+import Image from "astro/components/Image.astro";
+import heroImage from "@/assets/hero/cajas.jpg";
+---
+
+<Layout title="Transporte Sanchez | Inicio">
+  <Sidemenu />
+  <section
+    class="container flex flex-col items-center justify-center w-full h-screen md:flex-row"
+  >
+    <article class="flex flex-col items-center justify-center order-2">
+      <h1 class="mb-5 font-medium h2 md:h1">Transporte Sanchez</h1>
+      <h2 class="mb-5 font-bold text-center h2">
+        Nos encargamos de tu embalaje
+      </h2>
+      <p class="text-center text-black/80 h3">
+        Muebles, cristales, todo tipo de objetos delicados
+      </p>
+      <Button
+        class="mt-5 bg-green-500 group hover:text-myWhite hover:bg-sky-600"
+        ><a href="https://wa.me/18094474620" class="flex gap-x-2"
+          >Contactanos
+          <slot name="after">
+            <Icon
+              name="fa-brands:whatsapp"
+              class="text-2xl transition-all duration-300 ease-in-out group-hover:text-myWhite"
+              size={24}
+            /></slot
+          ></a
+        >
+      </Button>
+    </article>
+    <article>
+      <Image
+        src={heroImage}
+        class="w-[250px] mb-12 order-1 rounded-lg shadow-lg"
+        alt="A description of my image."
+      />
+    </article>
+  </section>
+</Layout>

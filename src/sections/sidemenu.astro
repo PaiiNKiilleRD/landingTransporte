@@ -1,0 +1,71 @@
+---
+const links = [
+  {
+    text: "Inicio",
+    path: "/",
+  },
+  {
+    text: "Servicios",
+    path: "/",
+  },
+  {
+    text: "Sobre Nosotros",
+    path: "/",
+  },
+  {
+    text: "Contactanos",
+    path: "/",
+  },
+];
+---
+
+<div
+  id="bgSideMenu"
+  class="fixed top-0 right-[100%] w-full transition-all duration-300 h-screen backdrop-blur-sm bg-black/80"
+>
+  <div
+    id="sideMenu"
+    class="w-[60%] absolute right-0 top-0 transition-all duration-300 h-screen bg-primary flex flex-col items-center ease-in-out justify-center"
+  >
+    <ul class="">
+      {
+        links.map((link) => {
+          return (
+            <li>
+              <a
+                href={link.path}
+                class="block px-3 py-3 transition-all duration-500 h3 hover:bg-yellowHover"
+              >
+                {link.text}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</div>
+
+<script>
+  import { isMenuOpen } from "@/stores";
+  const bgSideMenu = document.getElementById("bgSideMenu") as Element;
+  const sideMenu = document.getElementById("sideMenu") as Element;
+
+  isMenuOpen.subscribe((open) => {
+    if (open) {
+      // bgSideMenu.classList.add("fixed");
+      // bgSideMenu.classList.remove("translate-x-full");
+      bgSideMenu.classList.add("right-[0%]");
+      bgSideMenu.classList.remove("right-[100%]");
+      // sideMenu.classList.add("right-0");
+      // sideMenu.classList.remove("-right-[60%]");
+    } else {
+      // bgSideMenu.classList.remove("fixed");
+      // bgSideMenu.classList.add("translate-x-full");
+      bgSideMenu.classList.remove("right-[0%]");
+      bgSideMenu.classList.add("right-[100%]");
+      // sideMenu.classList.remove("right-0");
+      // sideMenu.classList.add("-right-[60%]");
+    }
+  });
+</script>
