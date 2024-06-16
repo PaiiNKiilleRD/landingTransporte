@@ -5,12 +5,11 @@ interface Props {
 const { title } = Astro.props;
 
 import Navbar from "@/sections/navbar.astro";
+import Sidemenu from "@/sections/sidemenu.astro";
 ---
 
 <html lang="en">
   <head>
-    <!-- ICONS -->
-
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width" />
@@ -21,26 +20,27 @@ import Navbar from "@/sections/navbar.astro";
     <!--  BARRA DE NAVEGACION  -->
     <header>
       <Navbar />
+      <Sidemenu />
     </header>
     <!-- BODY -->
     <slot />
   </body>
+
+  <style is:global>
+    body {
+      @apply bg-primary;
+    }
+
+    .h1 {
+      @apply text-[48px] xl:text-[80px] leading-[1.1];
+    }
+
+    .h2 {
+      @apply text-[36px] xl:text-[48px] leading-[1.1];
+    }
+
+    .h3 {
+      @apply text-[20px] xl:text-[24px] leading-[1.1];
+    }
+  </style>
 </html>
-
-<style is:global>
-  body {
-    @apply bg-primary;
-  }
-
-  .h1 {
-    @apply text-[48px] xl:text-[80px] leading-[1.1];
-  }
-
-  .h2 {
-    @apply text-[36px] xl:text-[48px] leading-[1.1];
-  }
-
-  .h3 {
-    @apply text-[20px] xl:text-[24px] leading-[1.1];
-  }
-</style>
