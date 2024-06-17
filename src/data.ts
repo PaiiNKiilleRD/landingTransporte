@@ -1,18 +1,18 @@
 export const links = [
   {
     text: "Inicio",
-    path: "/",
+    path: "/transporteLanding",
   },
   {
     text: "Servicios",
-    path: "/servicios",
+    path: "/transporteLanding/servicios",
   },
   {
     text: "Sobre Nosotros",
-    path: "/",
+    path: "/transporteLanding/servicios",
   },
   {
     text: "Contactanos",
-    path: "/",
+    path: "/transporteLanding/servicios",
   },
 ];
