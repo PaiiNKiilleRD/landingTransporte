@@ -7,5 +7,5 @@ import icon from "astro-icon";
 export default defineConfig({
   integrations: [tailwind(), icon()],
   // site: 'https://PaiiNKiilleRD.github.io',
-  base: 'transporteLanding',
+  // base: 'transporteLanding',
 });

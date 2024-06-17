@@ -11,18 +11,22 @@ import heroImage from "@/assets/hero/cajas.jpg";
 
 <Layout title="Transporte Sanchez | Inicio">
   <section
-    class="container flex flex-col items-center justify-center w-full h-screen md:flex-row"
+    class="container flex flex-col items-center justify-center w-full h-screen md:justify-between md:flex-row"
   >
-    <article class="flex flex-col items-center justify-center order-2">
-      <h1 class="mb-5 font-medium h2 md:h1">Transporte Sanchez</h1>
-      <h2 class="mb-5 font-bold text-center h2">
-        Nos encargamos de tu embalaje
+    <article
+      class="flex flex-col items-center justify-center order-2 md:mr-2 md:items-start md:order-0"
+    >
+      <h1 class="mb-5 text-4xl font-medium md:text-5xl lg:text-7">
+        Transporte Sanchez
+      </h1>
+      <h2 class="w-full mb-5 font-bold text-center md:text-left h2">
+        Nos encargamos <br class="hidden xl:inline" /> de tu embalaje
       </h2>
-      <p class="text-center text-black/80 h3">
+      <p class="text-center md:text-left text-black/80 h3">
         Muebles, cristales, todo tipo de objetos delicados
       </p>
       <Button
-        class="mt-5 bg-green-500 group hover:text-myWhite hover:bg-sky-600"
+        class="mt-5 bg-green-500 xl:mt-8 group hover:text-myWhite hover:bg-sky-600"
         ><a href="https://wa.me/18094474620" class="flex gap-x-2"
           >Contactanos
           <slot name="after">
@@ -35,10 +39,10 @@ import heroImage from "@/assets/hero/cajas.jpg";
         >
       </Button>
     </article>
-    <article>
+    <article class="order-1 md:order-2 w-[250px] md:w-[320px] xl:w-[550px]">
       <Image
         src={heroImage}
-        class="w-[250px] mb-12 order-1 rounded-lg shadow-lg"
+        class="w-full mb-12 rounded-lg shadow-lg md:mb-0"
         alt="A description of my image."
       />
     </article>

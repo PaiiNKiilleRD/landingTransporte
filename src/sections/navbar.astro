@@ -2,31 +2,31 @@
 import { links } from "@/data";
 ---
 
-<nav
-  class="container absolute top-0 right-0 flex items-center justify-between w-full h-20"
->
-  <h1 class="font-semibold h2">Logo</h1>
-  <ul class="items-center hidden md:flex">
-    {
-      links.map((link) => {
-        return (
-          <li>
-            <a
-              href={link.path}
-              class="block px-3 py-3 transition-all duration-500 hover:bg-yellowHover"
-            >
-              {link.text}
-            </a>
-          </li>
-        );
-      })
-    }
-  </ul>
-  <button
-    id="menuBtn"
-    class="z-[99] inline-flex items-center justify-center h-10 px-4 py-2 text-sm font-medium transition-all duration-300 border rounded-md border-slate-900"
-    >Menu</button
-  >
+<nav class="absolute top-0 right-0 w-full">
+  <div class="container flex items-center justify-between w-full h-20">
+    <h1 class="font-semibold h2">Logo</h1>
+    <ul class="items-center hidden md:flex">
+      {
+        links.map((link) => {
+          return (
+            <li>
+              <a
+                href={link.path}
+                class="block px-3 py-3 transition-all duration-500 hover:bg-yellowHover"
+              >
+                {link.text}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+    <button
+      id="menuBtn"
+      class="z-[99] md:hidden inline-flex items-center justify-center h-10 px-4 py-2 text-sm font-medium transition-all duration-300 border rounded-md border-slate-900"
+      >Menu</button
+    >
+  </div>
 </nav>
 
 <script>
