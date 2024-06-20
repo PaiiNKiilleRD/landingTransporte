@@ -1,10 +1,18 @@
 ---
 import { links } from "@/data";
+
+import Image from "astro/components/Image.astro";
+import logo from "@/assets/logo.png";
 ---
 
 <nav class="absolute top-0 right-0 w-full">
   <div class="container flex items-center justify-between w-full h-20">
-    <h1 class="font-semibold h2">Logo</h1>
+    <!-- <Image
+      src={logo}
+      class="w-[120px]"
+      alt="Logo de la empresa de servicios de transporte Sanchez."
+    /> -->
+    <h1 class="h1">Logo</h1>
     <ul class="items-center hidden md:flex">
       {
         links.map((link) => {

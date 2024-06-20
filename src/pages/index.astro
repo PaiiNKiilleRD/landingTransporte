@@ -9,7 +9,7 @@ import Image from "astro/components/Image.astro";
 import heroImage from "@/assets/hero/cajas.jpg";
 ---
 
-<Layout title="Transporte Sanchez | Inicio">
+<Layout title="Servicios de Transporte Sanchez | Inicio">
   <section
     class="container flex flex-col items-center justify-center w-full h-screen md:justify-between md:flex-row"
   >
@@ -17,19 +17,19 @@ import heroImage from "@/assets/hero/cajas.jpg";
       class="flex flex-col items-center justify-center order-2 md:mr-2 md:items-start md:order-0"
     >
       <h1
-        class="block w-full mb-5 text-4xl font-medium md:text-5xl lg:text-6xl"
+        class="block w-full mb-5 text-4xl font-medium text-center md:text-left md:text-5xl lg:text-6xl"
       >
-        Transporte Sanchez
+        Servicios de <br class="block" /> Transporte Sanchez
       </h1>
       <h2 class="w-full mb-5 font-bold text-center md:text-left h2">
         Nos encargamos <br class="hidden xl:inline" /> de tu embalaje
       </h2>
       <p class="text-center md:text-left text-black/80 h3">
-        Muebles, cristales, todo tipo de objetos delicados
+        Muebles, Cristales y todo tipo de Material Delicado…
       </p>
       <Button
-        class="mt-5 bg-green-500 xl:mt-8 group hover:text-myWhite hover:bg-sky-600"
-        ><a href="https://wa.me/18094474620" class="flex gap-x-2"
+        class="mt-10 bg-green-500 md:mt-5 xl:mt-8 group hover:text-myWhite hover:bg-sky-600"
+        ><a href="https://wa.me/18294221826" class="flex gap-x-2"
           >Contactanos
           <slot name="after">
             <Icon
@@ -44,7 +44,7 @@ import heroImage from "@/assets/hero/cajas.jpg";
     <article class="order-1 md:order-2 w-[250px] md:w-[320px] xl:w-[500px]">
       <Image
         src={heroImage}
-        class="w-full mb-12 rounded-lg shadow-lg md:mb-0"
+        class="w-full mb-12 rounded-lg shadow-2xl md:mb-0"
         alt="A description of my image."
       />
     </article>
