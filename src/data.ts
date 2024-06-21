@@ -13,6 +13,6 @@ export const links = [
   },
   {
     text: "Contactanos",
-    path: "/transporteLanding/servicios",
+    path: "/transporteLanding/contactanos",
   },
 ];

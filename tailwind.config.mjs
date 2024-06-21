@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
+import animations from "@midudev/tailwind-animations";
 
 export default {
 	darkMode: ["class"],
@@ -27,5 +28,5 @@ export default {
 			}
 		},
 	},
-	plugins: [],
+	plugins: [animations],
 }
