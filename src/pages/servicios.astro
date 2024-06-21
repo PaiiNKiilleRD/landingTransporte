@@ -1,8 +1,6 @@
 ---
 import Layout from "../layout/layout.astro";
 
-import { Icon } from "astro-iconify";
-
 import Image from "astro/components/Image.astro";
 import image1 from "@/assets/servicios/mudanza.jpg";
 import image2 from "@/assets/servicios/acarreo.jpg";
@@ -13,13 +11,17 @@ import image3 from "@/assets/servicios/embalaje.jpg";
   <section
     class="container flex flex-col items-center justify-center w-full h-screen"
   >
-    <h1 class="block py-5 font-bold text-center lg:py-12 h2">
+    <h1
+      class="block py-5 font-bold text-center animate-duration-slower animate-blurred-fade-in lg:py-12 h2"
+    >
       Servicios de <br class="block md:hidden" /> Transporte Sanchez
     </h1>
     <div
       class="flex flex-col items-center justify-center gap-5 lg:gap-10 lg:flex-row"
     >
-      <article class="flex flex-col items-center justify-center">
+      <article
+        class="flex flex-col items-center justify-center animate-fade-in-right animate-delay-300"
+      >
         <h2 class="mb-5 font-medium h3">Mudanzas</h2>
         <Image
           src={image1}
@@ -27,7 +29,9 @@ import image3 from "@/assets/servicios/embalaje.jpg";
           alt="A description of my image."
         />
       </article>
-      <article class="flex flex-col items-center justify-center">
+      <article
+        class="flex flex-col items-center justify-center animate-fade-in-left animate-duration-600 animate-delay-500"
+      >
         <h2 class="mb-5 font-medium h3">Acarreos</h2>
         <Image
           src={image2}
@@ -35,7 +39,9 @@ import image3 from "@/assets/servicios/embalaje.jpg";
           alt="A description of my image."
         />
       </article>
-      <article class="flex flex-col items-center justify-center">
+      <article
+        class="flex flex-col items-center justify-center animate-fade-in-right animate-duration-1000 animate-delay-800"
+      >
         <h2 class="mb-5 font-medium h3">Embalaje</h2>
         <Image
           src={image3}

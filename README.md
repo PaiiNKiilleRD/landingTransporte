@@ -1,3 +1,8 @@
 # To do
 
-- ANIMATIONS
+- Change bg navbar by scroll.
+
+# Done
+
+- Animations
+- View Transitions

@@ -1,11 +1,11 @@
 ---
 import { links } from "@/data";
-
-import Image from "astro/components/Image.astro";
-import logo from "@/assets/logo.png";
 ---
 
-<nav class="absolute top-0 right-0 w-full z-[2]">
+<nav
+  class="fixed top-0 right-0 w-full z-[6] transition-all duration-300 bg-transparent"
+  transition:persist
+>
   <div class="container flex items-center justify-between w-full h-20">
     <!-- <Image
       src={logo}
@@ -31,7 +31,7 @@ import logo from "@/assets/logo.png";
     </ul>
     <button
       id="menuBtn"
-      class="z-[99] md:hidden inline-flex items-center justify-center h-10 px-4 py-2 text-sm font-medium transition-all duration-300 border rounded-md border-slate-900"
+      class="z-[99] inline-flex items-center justify-center h-10 px-4 py-2 text-sm font-medium transition-all duration-300 border rounded-md md:hidden border-slate-900"
       >Menu</button
     >
   </div>
@@ -40,7 +40,14 @@ import logo from "@/assets/logo.png";
 <script>
   import { isMenuOpen } from "@/stores.js";
 
+  const nav = document.querySelector("nav") as Element;
   const menuBtn = document.getElementById("menuBtn") as Element;
+
+  //  Test
+  const scroll = document.onscroll?.length.toString();
+  document.addEventListener("scroll", () => {
+    console.log(scroll);
+  });
 
   menuBtn.addEventListener("click", () => {
     isMenuOpen.set(!isMenuOpen.value);
@@ -51,9 +58,15 @@ import logo from "@/assets/logo.png";
     if (open) {
       menuBtn.classList.add("text-white");
       menuBtn.classList.add("bg-slate-900");
+      // nav.classList.add("bg-transparent");
+      // nav.classList.remove("bg-[#f6f6f6]");
+      // nav.classList.remove("shadow-xl");
     } else {
       menuBtn.classList.remove("text-white");
       menuBtn.classList.remove("bg-slate-900");
+      // nav.classList.remove("bg-transparent");
+      // nav.classList.add("bg-[#f6f6f6]");
+      // nav.classList.add("shadow-xl");
     }
   });
 </script>

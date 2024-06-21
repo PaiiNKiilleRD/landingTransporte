@@ -3,12 +3,13 @@ import { links } from "@/data";
 ---
 
 <div
+  transition:persist
   id="bgSideMenu"
-  class="fixed z-10 top-0 right-[100%] w-full transition-all duration-300 h-screen backdrop-blur-sm bg-black/80"
+  class="top-0 fixed z-[5] right-[100%] w-full transition-all duration-300 h-screen backdrop-blur-sm bg-black/80"
 >
   <div
     id="sideMenu"
-    class="w-[60%] z-10 absolute right-0 top-0 transition-all duration-300 h-screen bg-primary flex flex-col items-center ease-in-out justify-center"
+    class="w-[60%] z-[6] absolute right-0 top-0 transition-all duration-300 h-screen bg-primary flex flex-col items-center ease-in-out justify-center"
   >
     <ul class="">
       {
@@ -33,6 +34,10 @@ import { links } from "@/data";
   import { isMenuOpen } from "@/stores";
   const bgSideMenu = document.getElementById("bgSideMenu") as Element;
   const sideMenu = document.getElementById("sideMenu") as Element;
+
+  document.addEventListener("astro:page-load", () => {
+    isMenuOpen.set(false);
+  });
 
   isMenuOpen.subscribe((open) => {
     if (open) {
