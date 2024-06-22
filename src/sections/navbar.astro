@@ -3,8 +3,8 @@ import { links } from "@/data";
 ---
 
 <nav
-  class="fixed top-0 right-0 w-full z-[6] transition-all duration-300 bg-transparent"
   transition:persist
+  class="fixed top-0 right-0 w-full z-[6] shadow-none transition-all duration-300 bg-transparent"
 >
   <div class="container flex items-center justify-between w-full h-20">
     <!-- <Image
@@ -30,6 +30,7 @@ import { links } from "@/data";
       }
     </ul>
     <button
+      transition:persist
       id="menuBtn"
       class="z-[99] inline-flex items-center justify-center h-10 px-4 py-2 text-sm font-medium transition-all duration-300 border rounded-md md:hidden border-slate-900"
       >Menu</button
@@ -46,12 +47,12 @@ import { links } from "@/data";
 
   //  AGREGANDO CLASE AL HACER SCROLL
   window.addEventListener("scroll", () => {
-    nav.classList.toggle("scrolled", window.scrollY > 100);
+    nav.classList.toggle("scrolled", window.scrollY > 60);
   });
   // MANEJO DE ESTADO
   menuBtn.addEventListener("click", () => {
     isMenuOpen.set(!isMenuOpen.value);
-    console.log(isMenuOpen.value);
+    //console.log(isMenuOpen.value);
   });
   // USANDO ESTADO
   isMenuOpen.subscribe((open) => {
@@ -59,16 +60,10 @@ import { links } from "@/data";
       menuBtn.classList.add("text-white");
       menuBtn.classList.add("bg-slate-900");
       nav.classList.remove("scrolled");
-      // nav.classList.add("bg-transparent");
-      // nav.classList.remove("bg-[#f6f6f6]");
-      // nav.classList.remove("shadow-xl");
     } else {
       menuBtn.classList.remove("text-white");
       menuBtn.classList.remove("bg-slate-900");
       nav.classList.add("scrolled");
-      // nav.classList.remove("bg-transparent");
-      // nav.classList.add("bg-[#f6f6f6]");
-      // nav.classList.add("shadow-xl");
     }
   });
 
@@ -89,6 +84,6 @@ import { links } from "@/data";
   }
 
   .scrolled {
-    @apply bg-[#f6f6f6] shadow-lg transition-all duration-500;
+    @apply bg-[#f6f6f6] transition-all duration-500;
   }
 </style>

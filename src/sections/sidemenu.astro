@@ -41,19 +41,11 @@ import { links } from "@/data";
 
   isMenuOpen.subscribe((open) => {
     if (open) {
-      // bgSideMenu.classList.add("fixed");
-      // bgSideMenu.classList.remove("translate-x-full");
       bgSideMenu.classList.add("right-[0%]");
       bgSideMenu.classList.remove("right-[100%]");
-      // sideMenu.classList.add("right-0");
-      // sideMenu.classList.remove("-right-[60%]");
     } else {
-      // bgSideMenu.classList.remove("fixed");
-      // bgSideMenu.classList.add("translate-x-full");
       bgSideMenu.classList.remove("right-[0%]");
       bgSideMenu.classList.add("right-[100%]");
-      // sideMenu.classList.remove("right-0");
-      // sideMenu.classList.add("-right-[60%]");
     }
   });
 </script>
