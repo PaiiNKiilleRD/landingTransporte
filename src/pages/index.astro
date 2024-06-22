@@ -8,51 +8,52 @@ import Image from "astro/components/Image.astro";
 import heroImage from "@/assets/hero/cajas.jpg";
 ---
 
-<Layout title="Servicios de Transporte Sanchez | Inicio" />
-<section
-  class="container flex flex-col items-center justify-center w-full h-screen mt-[20px] md:justify-between md:flex-row"
->
-  <article
-    class="flex flex-col items-center justify-center order-2 md:mr-2 md:items-start md:order-0"
+<Layout title="Servicios de Transporte Sanchez | Inicio">
+  <section
+    class="container flex flex-col items-center justify-center w-full h-screen mt-[20px] md:justify-between md:flex-row"
   >
-    <h1
-      class="block w-full mb-5 text-4xl font-bold text-center animate-fade-in-down animate-duration-500 md:text-left md:text-5xl lg:text-6xl"
+    <article
+      class="flex flex-col items-center justify-center order-2 md:mr-2 md:items-start md:order-0"
     >
-      Servicios de <br class="block" /> Transporte Sanchez
-    </h1>
-    <h2
-      class="w-full mb-5 text-3xl font-medium text-center md:text-left animate-fade-in animate-duration-500 animate-delay-500"
-    >
-      Nos encargamos <br class="block md:hidden" /> de tu embalaje
-    </h2>
-    <p
-      class="text-center md:text-left text-black/80 h3 animate-fade-in-up animate-duration-500 animate-delay-300"
-    >
-      Muebles, Cristales y todo tipo de Material Delicado…
-    </p>
-    <!-- Boton -->
-    <Button
-      class="order-1 mt-4 bg-green-500 md:mt-5 xl:mt-8 group hover:text-myWhite hover:bg-sky-600"
-      ><a href="https://wa.me/18294221826" class="flex gap-x-2"
-        >Contactanos
-        <slot name="after">
-          <Icon
-            name="fa-brands:whatsapp"
-            class="text-2xl transition-all duration-300 ease-in-out group-hover:text-myWhite"
-            size={24}
-          /></slot
-        ></a
+      <h1
+        class="block w-full mb-5 text-4xl font-bold text-center animate-fade-in-down animate-duration-500 md:text-left md:text-5xl lg:text-6xl"
       >
-    </Button>
-  </article>
-  <!-- Imagen -->
-  <article
-    class="order-1 md:order-2 w-[60%] mb-4 md:w-[320px] xl:w-[500px] animate-zoom-in animate-duration-800"
-  >
-    <Image
-      src={heroImage}
-      class="w-full rounded-lg shadow-md md:mb-0"
-      alt="Logo de Servicios de Transporte Sanchez."
-    />
-  </article>
-</section>
+        Servicios de <br class="block" /> Transporte Sanchez
+      </h1>
+      <h2
+        class="w-full mb-5 text-3xl font-medium text-center md:text-left animate-fade-in animate-duration-500 animate-delay-500"
+      >
+        Nos encargamos <br class="block md:hidden" /> de tu embalaje
+      </h2>
+      <p
+        class="text-center md:text-left text-black/80 h3 animate-fade-in-up animate-duration-500 animate-delay-300"
+      >
+        Muebles, Cristales y todo tipo de Material Delicado…
+      </p>
+      <!-- Boton -->
+      <Button
+        class="order-1 mt-4 bg-green-500 md:mt-5 xl:mt-8 group hover:text-myWhite hover:bg-sky-600"
+        ><a href="https://wa.me/18294221826" class="flex gap-x-2"
+          >Contactanos
+          <slot name="after">
+            <Icon
+              name="fa-brands:whatsapp"
+              class="text-2xl transition-all duration-300 ease-in-out group-hover:text-myWhite"
+              size={24}
+            /></slot
+          ></a
+        >
+      </Button>
+    </article>
+    <!-- Imagen -->
+    <article
+      class="order-1 md:order-2 w-[60%] mb-4 md:w-[320px] xl:w-[500px] animate-zoom-in animate-duration-800"
+    >
+      <Image
+        src={heroImage}
+        class="w-full rounded-lg shadow-md md:mb-0"
+        alt="Logo de Servicios de Transporte Sanchez."
+      />
+    </article>
+  </section>
+</Layout>

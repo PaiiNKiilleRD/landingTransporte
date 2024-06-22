@@ -9,6 +9,7 @@ import { fade } from "astro:transitions";
 
 import Navbar from "@/sections/navbar.astro";
 import Sidemenu from "@/sections/sidemenu.astro";
+import Footer from "@/sections/footer.astro";
 ---
 
 <html lang="es">
@@ -88,7 +89,9 @@ Estamos ubicados en Santo Domingo brindando servicios en toda Republica Dominica
     <!-- BODY -->
     <main>
       <slot />
+      <Footer />
     </main>
+    <!--  -->
     <style is:global>
       body {
         @apply bg-[#f6f6f6] font-lato;
