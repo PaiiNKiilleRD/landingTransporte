@@ -69,4 +69,19 @@ import { links } from "@/data";
       // nav.classList.add("shadow-xl");
     }
   });
+
+  const links = document.querySelectorAll("a");
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      // SOLUCION PARCIAL .
+      document.querySelector(".active")?.classList.remove("active");
+      link.classList.add("active");
+    });
+  });
 </script>
+
+<style>
+  .active {
+    @apply bg-yellow-500;
+  }
+</style>
