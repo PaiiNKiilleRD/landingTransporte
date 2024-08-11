@@ -1,10 +1,3 @@
-#REVISAR DESPLIEGE
-# To do
-- Contact Page.
+# Pagina para una empresa de Transporte
 
-- Change bg navbar by scroll.
-
-# Done
-
-- Animations
-- View Transitions
+https://paiinkiillerd.github.io/landingTransporte/
