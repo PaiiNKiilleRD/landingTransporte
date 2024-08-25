@@ -9,13 +9,6 @@ import heroImage from "@/assets/hero/cajas.jpg";
 ---
 
 <Layout title="Servicios de Transporte Sanchez | Inicio">
-  <link
-    rel="preload"
-    href={heroImage.src}
-    as="image"
-    type="image/webp"
-    fetchpriority="high"
-  />
   <section
     class="container lg:h-screen flex flex-col items-center justify-center w-full h-screen mt-[20px] md:justify-between md:flex-row"
   >
@@ -56,8 +49,10 @@ import heroImage from "@/assets/hero/cajas.jpg";
     <article
       class="order-1 md:order-2 w-[60%] mb-4 md:w-[320px] xl:w-[500px] animate-zoom-in animate-duration-300"
     >
-      <img
-        src={heroImage.src}
+      <Image
+        src={heroImage}
+        width={450}
+        loading={"eager"}
         class="w-full rounded-lg shadow-md md:mb-0"
         alt="Logo de Servicios de Transporte Sanchez."
       />
