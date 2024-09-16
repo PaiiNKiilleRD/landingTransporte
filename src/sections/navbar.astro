@@ -4,7 +4,7 @@ import { links } from "@/data";
 
 <nav
   transition:persist
-  class="fixed top-0 right-0 w-full z-[6] shadow-none transition-all duration-300 bg-[#f7df56]"
+  class="fixed top-0 right-0 w-full z-[6] shadow-none transition-all duration-300 bg-[#FCD63B]"
 >
   <div class="container flex items-center justify-between w-full h-20">
     <!-- <Image
@@ -45,27 +45,25 @@ import { links } from "@/data";
   const nav = document.querySelector("nav") as Element;
   const menuBtn = document.getElementById("menuBtn") as Element;
 
-  document.addEventListener("astro:page-load", () =>
-    nav.classList.add("bg-[#f7df56]")
-  );
+  // document.addEventListener("astro:page-load", () =>
+  //   nav.classList.add("bg-[#f7df56]")
+  // );
   //  AGREGANDO CLASE AL HACER SCROLL
   // window.addEventListener("scroll", () => {
-  //   nav.classList.toggle("scrolled", window.scrollY > 10);
+  //   nav.classList.toggle("scrolled", window.scrollY >  50);
   // });
+
   // MANEJO DE ESTADO
   menuBtn.addEventListener("click", () => {
     isMenuOpen.set(!isMenuOpen.value);
-    //console.log(isMenuOpen.value);
-  });
-  // USANDO ESTADO
-  isMenuOpen.subscribe((open) => {
-    if (open) {
-      menuBtn.classList.add("text-white");
-      nav.classList.remove("scrolled");
-    } else {
-      menuBtn.classList.remove("text-white");
-      nav.classList.add("scrolled");
-    }
+    // USANDO ESTADO
+    isMenuOpen.subscribe((open) => {
+      if (open) {
+        menuBtn.classList.add("border-white");
+      } else {
+        menuBtn.classList.remove("border-white");
+      }
+    });
   });
 
   //  BG YELLLOW AL HACER CLICK A UN LINK
@@ -84,7 +82,7 @@ import { links } from "@/data";
     @apply bg-yellow-400;
   }
 
-  /* .scrolled {
+  .scrolled {
     @apply bg-[#F0F8FF] transition-all duration-500;
-  } */
+  }
 </style>
